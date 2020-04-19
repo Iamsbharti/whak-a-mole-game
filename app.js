@@ -16,7 +16,7 @@ function randomSquare(){
   let randomPosition =square[Math.floor(Math.random()*9)]
   randomPosition.classList.add('mole')
 
-  hitPosition=randomPosition.id
+  var hitPosition=randomPosition.id
 }
 
 //Add eventlistener to each sqaure & compute score
@@ -42,12 +42,11 @@ moveMole()
 function timeLeftCounter(){
   currentTime--
   timeLeft.textContent=currentTime
-  
   if(currentTime===0){
     clearInterval(timerId)
     alert('GAME OVER Your Final Score is:'+result)
+    timeLeft.textContent=60
   }
 }
-
-//Start Time
+//start counter
 let timerId=setInterval(timeLeftCounter,1000)
