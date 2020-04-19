@@ -12,7 +12,7 @@ let currentTime=timeLeft.textContent
 function randomSquare(){
   square.forEach(className=>{
     className.classList.remove('mole')
-    className.classList.remove('blank')
+    className.classList.remove('wrong')
   })
   let randomPosition =square[Math.floor(Math.random()*9)]
   randomPosition.classList.add('mole')
@@ -33,7 +33,7 @@ square.forEach(id=>{
 square.forEach(id=>{
   id.addEventListener('mouseup',()=>{
     if(id.id!==hitPosition){
-      id.classList.add('blank')
+      id.classList.add('wrong')
     }
   })
 })
@@ -45,6 +45,7 @@ function moveMole(){
 
 //start game
 moveMole()
+
 
 //Decrement Counter
 function timeLeftCounter(){

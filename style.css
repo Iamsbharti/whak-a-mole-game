@@ -16,7 +16,7 @@
   background-image: url("mole.jpg");
   background-size: cover;
 }
-.blank {
-  background-image: url("blank.png");
+.wrong {
+  background-image: url("wrong.png");
   background-size: cover;
 }
